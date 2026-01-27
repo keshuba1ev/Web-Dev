@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Project: Recipe book</title>
+    <style>
+      body {
+        background-color: #fff7e6;
+        font-family: Arial, sans-serif;
+        color: #2b2b2b;
+      }
+
+      h1 {
+        color: #7a2e0e;
+      }
+
+      h2 {
+        color: #1f4e5f;
+      }
+
+      a {
+        color: #1f4e5f;
+      }
+
+      .card {
+        background-color: white;
+        border: 2px solid #f2c57c;
+        padding: 12px;
+        margin: 14px 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 8px;
+      }
+
+      th, td {
+        border: 1px solid #d9d9d9;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2c57c;
+      }
+
+      .details li {
+        margin: 4px 0;
+      }
+
+      .steps li {
+        margin: 6px 0;
+      }
+
+      .source {
+        font-size: 12px;
+        color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>My Recipe Book</h1>
+
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#pancakes">Fluffy Pancakes</a></li>
+      <li><a href="#guacamole">Quick Guacamole</a></li>
+      <li><a href="#aglio-olio">Pasta Aglio e Olio</a></li>
+    </ol>
+
+    <!-- Recipe 1 -->
+    <div class="card">
+      <h2 id="pancakes">Fluffy Pancakes</h2>
+
+      <ul class="details">
+        <li><strong>Time:</strong> 15–20 min</li>
+        <li><strong>Serves:</strong> 2–3</li>
+        <li><strong>Best for:</strong> breakfast</li>
+      </ul>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Ingredients</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Flour</td><td>1 cup</td></tr>
+          <tr><td>Baking powder</td><td>2 tsp</td></tr>
+          <tr><td>Sugar</td><td>1–2 tbsp</td></tr>
+          <tr><td>Salt</td><td>pinch</td></tr>
+          <tr><td>Milk</td><td>3/4 cup</td></tr>
+          <tr><td>Egg</td><td>1</td></tr>
+          <tr><td>Melted butter (or oil)</td><td>2 tbsp</td></tr>
+        </tbody>
+      </table>
+
+      <ol class="steps">
+        <li><strong>Step 1:</strong> Mix dry ingredients in a bowl.</li>
+        <li><strong>Step 2:</strong> Whisk milk + egg + melted butter.</li>
+        <li><strong>Step 3:</strong> Combine wet + dry. Don’t overmix.</li>
+        <li><strong>Step 4:</strong> Cook on a lightly oiled pan 1–2 min per side.</li>
+      </ol>
+
+      <p class="source"><em>Source: <a href="https://en.wikipedia.org/wiki/Pancake">Wikipedia (Pancake)</a></em></p>
+    </div>
+
+    <!-- Recipe 2 -->
+    <div class="card">
+      <h2 id="guacamole">Quick Guacamole</h2>
+
+      <ul class="details">
+        <li><strong>Time:</strong> 10 min</li>
+        <li><strong>Serves:</strong> 2–4</li>
+        <li><strong>Best for:</strong> snack / tacos</li>
+      </ul>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Ingredients</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Ripe avocados</td><td>2</td></tr>
+          <tr><td>Lime juice</td><td>1–2 tbsp</td></tr>
+          <tr><td>Salt</td><td>to taste</td></tr>
+          <tr><td>Tomato (optional)</td><td>1/2, diced</td></tr>
+          <tr><td>Onion (optional)</td><td>2 tbsp, chopped</td></tr>
+          <tr><td>Chili/pepper (optional)</td><td>to taste</td></tr>
+        </tbody>
+      </table>
+
+      <ol class="steps">
+        <li><strong>Step 1:</strong> Mash avocados with a fork.</li>
+        <li><strong>Step 2:</strong> Add lime juice + salt.</li>
+        <li><strong>Step 3:</strong> Mix in tomato/onion/chili if you want.</li>
+        <li><strong>Step 4:</strong> Taste, adjust salt, serve immediately.</li>
+      </ol>
+
+      <p class="source"><em>Source: <a href="https://en.wikipedia.org/wiki/Guacamole">Wikipedia (Guacamole)</a></em></p>
+    </div>
+
+    <!-- Recipe 3 -->
+    <div class="card">
+      <h2 id="aglio-olio">Pasta Aglio e Olio</h2>
+
+      <ul class="details">
+        <li><strong>Time:</strong> 15 min</li>
+        <li><strong>Serves:</strong> 2</li>
+        <li><strong>Best for:</strong> quick dinner</li>
+      </ul>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Ingredients</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Spaghetti</td><td>200 g</td></tr>
+          <tr><td>Olive oil</td><td>3–4 tbsp</td></tr>
+          <tr><td>Garlic</td><td>3–5 cloves, sliced</td></tr>
+          <tr><td>Chili flakes (optional)</td><td>to taste</td></tr>
+          <tr><td>Salt</td><td>for pasta water</td></tr>
+          <tr><td>Parsley (optional)</td><td>small handful</td></tr>
+        </tbody>
+      </table>
+
+      <ol class="steps">
+        <li><strong>Step 1:</strong> Boil pasta in salted water until al dente.</li>
+        <li><strong>Step 2:</strong> Gently heat olive oil, add garlic (don’t burn).</li>
+        <li><strong>Step 3:</strong> Add chili flakes if you like.</li>
+        <li><strong>Step 4:</strong> Toss pasta with the oil/garlic. Add a splash of pasta water if needed.</li>
+      </ol>
+
+      <p class="source"><em>Source: <a href="https://en.wikipedia.org/wiki/Spaghetti_aglio_e_olio">Wikipedia (Aglio e olio)</a></em></p>
+    </div>
+  </body>
+</html>
