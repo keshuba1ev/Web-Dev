@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile Card</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background:#fff;
+      padding:30px;
+    }
+
+    .card{
+      width:320px;
+      border:1px solid #ddd;
+      border-radius:4px;
+      overflow:hidden;
+      box-shadow:0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .header{
+      height:180px;
+      background:
+        linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.45)),
+        url("https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png");
+      background-size:cover;
+      background-position:center;
+      position:relative;
+    }
+
+    .name-block{
+      position:absolute;
+      left:16px;
+      bottom:18px;
+      color:#fff;
+    }
+
+    .name-row{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size:20px;
+      font-weight:700;
+      margin:0 0 4px 0;
+    }
+
+    .dot{
+      width:10px;
+      height:10px;
+      background:#2ecc71;
+      border-radius:50%;
+      border:2px solid rgba(255,255,255,0.9);
+    }
+
+    .role{
+      font-size:14px;
+      opacity:0.9;
+      margin:0;
+    }
+
+    .time{
+      padding:10px 16px;
+      font-size:13px;
+      color:#444;
+      border-bottom:1px solid #eee;
+      background:#fafafa;
+    }
+
+    .menu{
+      list-style:none;
+      padding:10px 0;
+      margin:0;
+      background:#fff;
+    }
+
+    .menu li{
+      padding:10px 16px;
+      font-size:14px;
+      color:#333;
+    }
+
+    .menu li:hover{
+      background:#f2f2f2;
+      cursor:pointer;
+    }
+
+    .change{
+      color:#1f6feb;
+      text-decoration:none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="name-block">
+        <div class="name-row">
+          Cameron Pittman <span class="dot"></span>
+        </div>
+        <p class="role">Udacity Content Developer</p>
+      </div>
+    </div>
+
+    <div class="time">
+      1:12 PM local time (<a class="change" href="#">change</a>)
+    </div>
+
+    <ul class="menu">
+      <li>View preferences</li>
+      <li>Open account settings</li>
+      <li>Edit your profile</li>
+      <li>View your files</li>
+      <li>Set yourself away</li>
+    </ul>
+  </div>
+</body>
+</html>
