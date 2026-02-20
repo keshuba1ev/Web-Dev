@@ -1,0 +1,69 @@
+<section class="catalog">
+  <div class="catalog-header">
+    <h1 class="catalog-title">
+      <span class="title-accent">Kaspi</span> Каталог товаров
+    </h1>
+    <p class="catalog-subtitle">Лучшие товары по выгодным ценам — прямо с Kaspi.kz</p>
+  </div>
+
+  <div class="products-grid">
+    @for (product of products(); track product.id; let i = $index) {
+    <app-product-item [product]="product" [animationDelay]="(i * 0.08) + 's'" (openGallery)="onOpenGallery($event)"
+      (remove)="onProductRemoved($event)">
+    </app-product-item>
+    } @empty {
+    <div class="empty-state">
+      <p>В этой категории пока нет товаров.</p>
+    </div>
+    }
+  </div>
+</section>
+
+<!-- Lightbox Gallery Modal -->
+@if (galleryProduct) {
+<div class="lightbox-overlay" (click)="closeGallery()">
+  <div class="lightbox-container" (click)="$event.stopPropagation()">
+    <!-- Close -->
+    <button class="lightbox-close" (click)="closeGallery()" title="Закрыть">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+
+    <!-- Prev -->
+    <button class="lightbox-arrow lightbox-prev" (click)="galleryPrev()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6" />
+      </svg>
+    </button>
+
+    <!-- Main image -->
+    <div class="lightbox-image-wrapper">
+      <img [src]="galleryProduct.images[galleryIndex]"
+        [alt]="galleryProduct.name + ' — изображение ' + (galleryIndex + 1)" class="lightbox-image" />
+    </div>
+
+    <!-- Next -->
+    <button class="lightbox-arrow lightbox-next" (click)="galleryNext()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+    </button>
+
+    <!-- Thumbnails -->
+    <div class="lightbox-thumbnails">
+      @for (img of galleryProduct.images; track img; let k = $index) {
+      <img [src]="img" [alt]="galleryProduct.name + ' thumbnail ' + (k + 1)" class="lightbox-thumb"
+        [class.active]="k === galleryIndex" (click)="gallerySetIndex(k)" />
+      }
+    </div>
+
+    <!-- Product name -->
+    <p class="lightbox-title">{{ galleryProduct.name }}</p>
+  </div>
+</div>
+}

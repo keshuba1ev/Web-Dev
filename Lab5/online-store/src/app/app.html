@@ -1,0 +1,30 @@
+<div class="app-container">
+  <header class="header">
+    <h1>Online Store</h1>
+    
+    <nav class="category-tabs">
+      @for (category of categories; track category.id) {
+        <button 
+          class="category-btn"
+          [class.active]="category.id === selectedCategoryId"
+          (click)="selectCategory(category)">
+          {{ category.name }}
+        </button>
+      }
+    </nav>
+  </header>
+
+  <main class="content">
+    @if (selectedCategoryId === null) {
+      <div class="welcome-message">
+        <h2>Welcome to the Store!</h2>
+        <p>Please select a category above to view products.</p>
+      </div>
+    } @else {
+      <!-- Pass filtered products to the ProductListComponent -->
+      <app-product-list [products]="filteredProducts"></app-product-list>
+    }
+  </main>
+</div>
+
+<router-outlet />
