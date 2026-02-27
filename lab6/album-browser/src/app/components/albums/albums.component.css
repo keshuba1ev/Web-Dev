@@ -1,0 +1,51 @@
+.loading {
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+    color: #666;
+}
+
+.albums-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.album-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.album-item:hover {
+    background: #f5f7fa;
+    border-color: #ddd;
+    transform: translateX(2px);
+}
+
+.album-id {
+    font-weight: bold;
+    color: #888;
+    width: 40px;
+}
+
+.album-title {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+.delete-btn {
+    background: #dc3545;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}

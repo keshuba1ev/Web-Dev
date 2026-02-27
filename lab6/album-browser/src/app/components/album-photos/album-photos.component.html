@@ -1,0 +1,16 @@
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h2>Photos for Album {{ albumId }}</h2>
+        <button class="btn btn-outline" (click)="goBack()">Back to Album</button>
+    </div>
+
+    <div *ngIf="loading" class="loading">Loading photos...</div>
+    <div *ngIf="!loading && photos.length === 0" class="loading">No photos found.</div>
+
+    <div *ngIf="!loading" class="photos-grid">
+        <div *ngFor="let photo of photos" class="photo-card" [title]="photo.title">
+            <img [src]="photo.thumbnailUrl" [alt]="photo.title" loading="lazy">
+            <p class="photo-title">{{ photo.title }}</p>
+        </div>
+    </div>
+</div>

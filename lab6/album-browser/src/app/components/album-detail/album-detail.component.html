@@ -1,0 +1,27 @@
+<div class="card">
+    <h2>Album Details</h2>
+
+    <div *ngIf="loading" class="loading">Loading album details...</div>
+    <div *ngIf="!loading && !album" class="loading">Album not found.</div>
+
+    <div *ngIf="!loading && album">
+        <div class="detail-group">
+            <label>Album ID:</label>
+            <span>{{ album.id }}</span>
+        </div>
+        <div class="detail-group">
+            <label>User ID:</label>
+            <span>{{ album.userId }}</span>
+        </div>
+        <div class="detail-group">
+            <label>Title:</label>
+            <input type="text" [(ngModel)]="album.title" class="title-input">
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn" (click)="saveTitle()">Save</button>
+            <a [routerLink]="['/albums', album.id, 'photos']" class="btn btn-secondary">View Photos</a>
+            <button class="btn btn-outline" (click)="goBack()">Back</button>
+        </div>
+    </div>
+</div>
