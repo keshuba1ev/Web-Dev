@@ -1,5 +1,5 @@
 n = int(input())
 i = 1
-while i * i <= n:
-    print(i * i)
+while i ** 2 <= n:
+    print(i ** 2)
     i += 1

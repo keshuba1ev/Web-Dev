@@ -1,2 +1,6 @@
-a, b = int(input()), int(input())
-print(max(a, b))
+a = int(input())
+b = int(input())
+if a > b:
+    print(a)
+else:
+    print(b)
